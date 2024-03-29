@@ -18,6 +18,8 @@ inputs:
     description: 'folder origin'
   target:
     description: 'target folder'
+  commmand:
+    description: 'Command execute in the server'
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -25,5 +27,7 @@ runs:
     - ${{ inputs.host }}
     - ${{ inputs.port }}
     - ${{ inputs.username }}
+    - ${{ inputs.private_key }}
     - ${{ inputs.folder }}
     - ${{ inputs.target }}
+    - ${{ inputs.commmand }}

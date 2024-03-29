@@ -14,12 +14,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: connect to remote server
-      uses: Gustavo-caetano/sshcloudflareddeploy@1.0
+      uses: Gustavo-caetano/sshcloudflareddeploy@1.4
       with:
         host: ${{ vars.HOST }}
         username: ${{ secrets.USERNAME }}
         private_key: ${{ secrets.PRIVKEY }}
         port: ${{ secrets.PORT }}
         folder: folder
-        target: target 
+        target: target
+        commmand: "ls -l"
 ```
