@@ -1,5 +1,5 @@
-# Cloudflared SSH Remote Command Runner
-A barebones github action that lets you ssh into a server behind a cloudflare tunnel and run a command
+# Cloudflared SSH Remote Deploy Runner
+A barebones github action that lets you ssh into a server behind a cloudflare tunnel copy files and run a command
 
 ## Usage
 
