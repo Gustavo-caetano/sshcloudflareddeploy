@@ -1,0 +1,29 @@
+name: 'Cloudflared SSH Copy archives'
+branding:
+  icon: 'copy'
+  color: 'blue'
+description: 'Uma action para fazer a copia dos arquivos para o servidor'
+inputs:
+  host:
+    description: 'SSH host address'
+    required: true
+  port:
+    description: 'SSH port number'
+    default: "22"
+  username:
+    description: 'SSH username'
+  private_key:
+    description: 'SSH private key'
+  folder:
+    description: 'folder origin'
+  target:
+    description: 'target folder'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.host }}
+    - ${{ inputs.port }}
+    - ${{ inputs.username }}
+    - ${{ inputs.folder }}
+    - ${{ inputs.target }}
