@@ -8,6 +8,6 @@ RUN chmod +x /usr/bin/cloudflared
 RUN mkdir /root/.ssh
 
 COPY command.sh /command.sh
-RUN chmod +x /entrypoint.sh
+RUN chmod +x /command.sh
 
 ENTRYPOINT ["/command.sh"]
