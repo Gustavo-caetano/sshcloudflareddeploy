@@ -1,4 +1,4 @@
-name: 'Cloudflared SSH Copy archives'
+name: 'Cloudflared SSH Copy archives and Execute commmand'
 branding:
   icon: 'copy'
   color: 'blue'
