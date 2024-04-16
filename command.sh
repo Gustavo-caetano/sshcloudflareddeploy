@@ -7,8 +7,6 @@ chmod 600 /root/.ssh/key.pem
 
 ssh-keyscan $1 >> /root/.ssh/known_hosts
 
-ssh -o StrictHostKeyChecking=no -i /root/.ssh/key.pem $3@$1 -p $2 "echo conectado"
+scp -o StrictHostKeyChecking=no  -i /root/.ssh/key.pem -P $2 -r $5 $3@$1:$6
 
-scp -i /root/.ssh/key.pem -P $2 -r $5 $3@$1:$6
-
-ssh -i /root/.ssh/key.pem $3@$1 -p $2 "$7"
+ssh -o StrictHostKeyChecking=no  -i /root/.ssh/key.pem $3@$1 -p $2 "$7"
